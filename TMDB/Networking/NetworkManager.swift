@@ -10,37 +10,50 @@ class NetworkManager {
   
   static var shared = NetworkManager()
   
-  func searchMovies(query: String, page: Int, success: @escaping (_ results:[Movie]) -> Void, failure: @escaping (_ message: String) -> Void) {
+  func searchMovies(query: String, page: Int, success: @escaping (_ results:[Movie],_ hasMoreResults: Bool) -> Void, failure: @escaping (_ message: String) -> Void) {
     let endpoint: String = "http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=\(query)&page=\(page)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-    print("\(endpoint)")
     request(endpoint)
       .responseJSON { response in
         // check for errors
         guard response.result.error == nil else {
-          // got an error in getting the data, need to handle it
-          print(response.result.error!)
+          // got an error in getting the data, Alamofire takes care of network errors
           failure(response.result.error?.localizedDescription ?? "Network error")
           return
         }
         
         // make sure we got some JSON since that's what we expect
         guard let json = response.result.value as? [String: Any] else {
-          failure("Error parsing response")
+          failure("Couldn't parse response")
           return
         }
         
         // get results
         guard let results = json["results"] as? [[String: Any]] else {
-          failure("No results found")
+          guard let errors = json["errors"] as? [String] else {
+            // Counldn't get the error
+            failure("No results found")
+            return
+          }
+          // API error returned in response
+          failure(errors[0])
           return
         }
         
+        // In case there is no results
+        if results.count < 1 {
+          failure("No results found")
+          return
+        }
         var movies = [Movie]()
         for item in results {
           let movie = Movie(item: item)
           movies.append(movie)
         }
-        success(movies)
+        var hasMore = false
+        if let totalPages = json["total_pages"] as? Int, totalPages > page {
+          hasMore = true
+        }
+        success(movies, hasMore)
         
     }
   }

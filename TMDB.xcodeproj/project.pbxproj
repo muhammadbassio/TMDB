@@ -22,6 +22,10 @@
 		8E1275AF20C48F130012EAE9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1275AE20C48F130012EAE9 /* Router.swift */; };
 		8E1275B120C491320012EAE9 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1275B020C491320012EAE9 /* SearchInteractor.swift */; };
 		8E1275B320C4913F0012EAE9 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1275B220C4913F0012EAE9 /* SearchRouter.swift */; };
+		8E1C41A220C9DCC000040D1A /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C41A020C9DCC000040D1A /* LoadingCell.swift */; };
+		8E1C41A320C9DCC000040D1A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C41A120C9DCC000040D1A /* LoadingCell.xib */; };
+		8E1C41A620C9E1DB00040D1A /* UICollectionViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C41A520C9E1DB00040D1A /* UICollectionViewProtocols.swift */; };
+		8E1C41A820C9E23600040D1A /* UISearchControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C41A720C9E23600040D1A /* UISearchControllerProtocols.swift */; };
 		8E42D40020C6DFF70069B65A /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42D3FE20C6DFF70069B65A /* MovieCell.swift */; };
 		8E42D40120C6DFF70069B65A /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E42D3FF20C6DFF70069B65A /* MovieCell.xib */; };
 		8E42D40420C6E0130069B65A /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42D40220C6E0130069B65A /* HistoryCell.swift */; };
@@ -64,6 +68,10 @@
 		8E1275AE20C48F130012EAE9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8E1275B020C491320012EAE9 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		8E1275B220C4913F0012EAE9 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		8E1C41A020C9DCC000040D1A /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		8E1C41A120C9DCC000040D1A /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		8E1C41A520C9E1DB00040D1A /* UICollectionViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewProtocols.swift; sourceTree = "<group>"; };
+		8E1C41A720C9E23600040D1A /* UISearchControllerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchControllerProtocols.swift; sourceTree = "<group>"; };
 		8E42D3FE20C6DFF70069B65A /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		8E42D3FF20C6DFF70069B65A /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		8E42D40220C6E0130069B65A /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 		8E12759C20C489240012EAE9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				8E1C41A420C9E1BD00040D1A /* Extensions */,
 				8E42D3FD20C6DFDC0069B65A /* Cells */,
 				8E12759D20C4893A0012EAE9 /* SearchViewController.swift */,
 				8E12759E20C4893A0012EAE9 /* SearchViewController.xib */,
@@ -211,6 +220,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		8E1C41A420C9E1BD00040D1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E1C41A520C9E1DB00040D1A /* UICollectionViewProtocols.swift */,
+				8E1C41A720C9E23600040D1A /* UISearchControllerProtocols.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8E42D3FD20C6DFDC0069B65A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +238,8 @@
 				8E42D40320C6E0130069B65A /* HistoryCell.xib */,
 				8E42D40620C6E0250069B65A /* MessageCell.swift */,
 				8E42D40720C6E0250069B65A /* MessageCell.xib */,
+				8E1C41A020C9DCC000040D1A /* LoadingCell.swift */,
+				8E1C41A120C9DCC000040D1A /* LoadingCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -315,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1C41A320C9DCC000040D1A /* LoadingCell.xib in Resources */,
 				8E42D40520C6E0130069B65A /* HistoryCell.xib in Resources */,
 				8E42D40920C6E0250069B65A /* MessageCell.xib in Resources */,
 				8E12758420C4873E0012EAE9 /* LaunchScreen.storyboard in Resources */,
@@ -388,10 +409,13 @@
 				8E1275B320C4913F0012EAE9 /* SearchRouter.swift in Sources */,
 				8E1275AD20C48F0A0012EAE9 /* Presenter.swift in Sources */,
 				8E12759F20C4893A0012EAE9 /* SearchViewController.swift in Sources */,
+				8E1C41A820C9E23600040D1A /* UISearchControllerProtocols.swift in Sources */,
 				8E1275B120C491320012EAE9 /* SearchInteractor.swift in Sources */,
 				8E1275AF20C48F130012EAE9 /* Router.swift in Sources */,
 				8E12757C20C4873C0012EAE9 /* ViewController.swift in Sources */,
+				8E1C41A220C9DCC000040D1A /* LoadingCell.swift in Sources */,
 				8E12757A20C4873C0012EAE9 /* AppDelegate.swift in Sources */,
+				8E1C41A620C9E1DB00040D1A /* UICollectionViewProtocols.swift in Sources */,
 				8E1275A620C48D160012EAE9 /* Movie.swift in Sources */,
 				8E8012EF20C98FB700591995 /* NetworkManager.swift in Sources */,
 				8E1275AA20C48EF40012EAE9 /* SearchPresenter.swift in Sources */,

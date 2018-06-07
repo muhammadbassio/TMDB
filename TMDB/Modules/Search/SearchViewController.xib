@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="TMDB" customModuleProvider="target">
             <connections>
+                <outlet property="bottomConstraint" destination="8Nl-QM-HA0" id="5E7-V6-Px0"/>
                 <outlet property="collectionView" destination="a1z-mx-TR3" id="TJ0-y1-dlK"/>
                 <outlet property="spinner" destination="qJa-k9-CqM" id="rBj-dK-d3E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
