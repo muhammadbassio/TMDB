@@ -40,7 +40,7 @@ Viper is a design pattern that implements ‘separation of concern’ paradigm. 
 
 
 ## Building the app
-###1- Install dependencies:
+#### 1- Install dependencies:
 
 Install Cocoapods if not installed by running the below command in Terminal:
 
