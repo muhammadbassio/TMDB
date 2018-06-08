@@ -17,12 +17,7 @@ class SearchInteractor {
         self.presenter?.movies = movies
       }
       self.presenter?.canFetchMore = hasMore
-      if let hist = self.presenter?.history {
-        var filteredHistory = hist.filter { $0.lowercased() != query.lowercased() }
-        filteredHistory.insert(query, at: 0)
-        DataSource.save(history: filteredHistory)
-        self.presenter?.history = filteredHistory
-      }
+      DataSource.saveQuery(query: query)
       self.presenter?.currentPage = page
       self.presenter?.refreshResults()
     }, failure: { message in

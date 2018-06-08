@@ -27,6 +27,7 @@ extension SearchPresenter: UISearchBarDelegate {
   
   func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
     self.state = .typing
+    self.history = DataSource.getTopTen()
     self.viewController?.collectionView?.reloadData()
   }
   

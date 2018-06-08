@@ -8,6 +8,21 @@ import SwiftyJSON
 
 class DataSource {
   
+  static func saveQuery(query: String) {
+    let history = DataSource.getHistory()
+    var filteredHistory = history.filter { $0.lowercased() != query.lowercased() }
+    filteredHistory.insert(query, at: 0)
+    DataSource.save(history: filteredHistory)
+  }
+  
+  static func getTopTen() -> [String] {
+    let history = DataSource.getHistory()
+    if history.count > 10 {
+      return Array(history.prefix(10))
+    }
+    return history
+  }
+  
   static func save(history: [String]) {
     do {
       let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)

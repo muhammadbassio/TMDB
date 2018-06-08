@@ -61,6 +61,9 @@ class SearchPresenter: Presenter {
   func refreshResults() {
     self.viewController?.spinner?.stopAnimating()
     self.viewController?.collectionView?.reloadData()
+    if (self.movies.count < 1) && self.state == .searchResults {
+      self.displayError(message: "No results found")
+    }
   }
   
   func displayError(message: String) {

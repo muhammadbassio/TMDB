@@ -8,6 +8,8 @@ import UIKit
 
 class Movie {
   
+  static let baseURL = "http://image.tmdb.org/t/p"
+  
   static var dateFormatter: DateFormatter {
     let df = DateFormatter()
     df.dateFormat = "yyyy-MM-dd"
@@ -38,11 +40,11 @@ class Movie {
     if let p = item["poster_path"] as? String {
       switch UIScreen.main.scale {
       case 2:
-        self.thumbnailURL = "http://image.tmdb.org/t/p/w185\(p)"
+        self.thumbnailURL = "\(Movie.baseURL)/w185\(p)"
       case 3:
-        self.thumbnailURL = "http://image.tmdb.org/t/p/w500\(p)"
+        self.thumbnailURL = "\(Movie.baseURL)/w500\(p)"
       default:
-        self.thumbnailURL = "http://image.tmdb.org/t/p/w92\(p)"
+        self.thumbnailURL = "\(Movie.baseURL)/w92\(p)"
       }
       
     }

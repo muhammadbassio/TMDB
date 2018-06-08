@@ -9,9 +9,11 @@ import Alamofire
 class NetworkManager {
   
   static var shared = NetworkManager()
+  let apiKey = "2696829a81b1b5827d515ff121700838"
+  let apiURL = "http://api.themoviedb.org/3/search/movie"
   
   func searchMovies(query: String, page: Int, success: @escaping (_ results:[Movie],_ hasMoreResults: Bool) -> Void, failure: @escaping (_ message: String) -> Void) {
-    let endpoint: String = "http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=\(query)&page=\(page)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    let endpoint: String = "\(self.apiURL)?api_key=\(self.apiKey)&query=\(query)&page=\(page)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     request(endpoint)
       .responseJSON { response in
         // check for errors
