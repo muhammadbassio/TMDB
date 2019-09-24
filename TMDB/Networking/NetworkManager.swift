@@ -12,10 +12,15 @@ class NetworkManager {
   let apiKey = "2696829a81b1b5827d515ff121700838"
   let apiURL = "http://api.themoviedb.org/3/search/movie"
   
+  private let manager: SessionManager
+  
+  public init(manager: SessionManager = SessionManager.default) {
+      self.manager = manager
+  }
+  
   func searchMovies(query: String, page: Int, success: @escaping (_ results:[Movie],_ hasMoreResults: Bool) -> Void, failure: @escaping (_ message: String) -> Void) {
     let endpoint: String = "\(self.apiURL)?api_key=\(self.apiKey)&query=\(query)&page=\(page)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-    request(endpoint)
-      .responseJSON { response in
+    manager.request(endpoint).responseJSON { response in
         // check for errors
         guard response.result.error == nil else {
           // got an error in getting the data, Alamofire takes care of network errors

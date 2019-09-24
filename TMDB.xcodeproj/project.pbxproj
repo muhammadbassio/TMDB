@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08AC9861233A1CFB009A62D5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AC9860233A1CFB009A62D5 /* MockURLProtocol.swift */; };
+		08FEB0AA233A186C007D1FA3 /* NormalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FEB0A9233A186C007D1FA3 /* NormalTests.swift */; };
+		08FEB0AC233A1B12007D1FA3 /* MockedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FEB0AB233A1B12007D1FA3 /* MockedTests.swift */; };
 		8E12757A20C4873C0012EAE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12757920C4873C0012EAE9 /* AppDelegate.swift */; };
 		8E12757C20C4873C0012EAE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12757B20C4873C0012EAE9 /* ViewController.swift */; };
 		8E12758120C4873E0012EAE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E12758020C4873E0012EAE9 /* Assets.xcassets */; };
 		8E12758420C4873E0012EAE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E12758220C4873E0012EAE9 /* LaunchScreen.storyboard */; };
-		8E12758F20C4873E0012EAE9 /* TMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12758E20C4873E0012EAE9 /* TMDBTests.swift */; };
+		8E12758F20C4873E0012EAE9 /* StubbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12758E20C4873E0012EAE9 /* StubbedTests.swift */; };
 		8E12759F20C4893A0012EAE9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12759D20C4893A0012EAE9 /* SearchViewController.swift */; };
 		8E1275A020C4893A0012EAE9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E12759E20C4893A0012EAE9 /* SearchViewController.xib */; };
 		8E1275A220C48B660012EAE9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1275A120C48B660012EAE9 /* AppRouter.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08AC9860233A1CFB009A62D5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		08FEB0A9233A186C007D1FA3 /* NormalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTests.swift; sourceTree = "<group>"; };
+		08FEB0AB233A1B12007D1FA3 /* MockedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedTests.swift; sourceTree = "<group>"; };
 		1CD026DF37A66A7A5054F471 /* Pods-TMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMDB/Pods-TMDB.release.xcconfig"; sourceTree = "<group>"; };
 		4719C00F422F9267B09CED82 /* Pods-TMDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMDBTests/Pods-TMDBTests.release.xcconfig"; sourceTree = "<group>"; };
 		47A63ACD29C2C8512730C3F9 /* Pods_TMDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +65,7 @@
 		8E12758320C4873E0012EAE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E12758520C4873E0012EAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E12758A20C4873E0012EAE9 /* TMDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E12758E20C4873E0012EAE9 /* TMDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTests.swift; sourceTree = "<group>"; };
+		8E12758E20C4873E0012EAE9 /* StubbedTests.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = StubbedTests.swift; sourceTree = "<group>"; tabWidth = 2; };
 		8E12759020C4873E0012EAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E12759D20C4893A0012EAE9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8E12759E20C4893A0012EAE9 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -126,7 +132,9 @@
 				12033B8A83250A0404A56264 /* Pods */,
 				A01F185F10D8C59F2AFAA921 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		8E12757720C4873C0012EAE9 /* Products */ = {
 			isa = PBXGroup;
@@ -156,8 +164,11 @@
 		8E12758D20C4873E0012EAE9 /* TMDBTests */ = {
 			isa = PBXGroup;
 			children = (
-				8E12758E20C4873E0012EAE9 /* TMDBTests.swift */,
+				08FEB0A9233A186C007D1FA3 /* NormalTests.swift */,
+				8E12758E20C4873E0012EAE9 /* StubbedTests.swift */,
+				08FEB0AB233A1B12007D1FA3 /* MockedTests.swift */,
 				8E12759020C4873E0012EAE9 /* Info.plist */,
+				08AC9860233A1CFB009A62D5 /* MockURLProtocol.swift */,
 			);
 			path = TMDBTests;
 			sourceTree = "<group>";
@@ -473,7 +484,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E12758F20C4873E0012EAE9 /* TMDBTests.swift in Sources */,
+				08FEB0AA233A186C007D1FA3 /* NormalTests.swift in Sources */,
+				08FEB0AC233A1B12007D1FA3 /* MockedTests.swift in Sources */,
+				8E12758F20C4873E0012EAE9 /* StubbedTests.swift in Sources */,
+				08AC9861233A1CFB009A62D5 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

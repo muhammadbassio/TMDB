@@ -61,3 +61,7 @@ pod install
 - Under Targets -> General -> Signing, Choose your **Team** (you might need to change the **Bundle Identifier**).
 - Choose your target device and hit Run.
 
+#### 2- Running unit tests:
+
+- Open the `TMDB.xcworkspace` (should be created after installing dependencies).
+- Choose `TMDBTests scheme` and press `command + U`.
